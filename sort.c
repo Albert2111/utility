@@ -94,10 +94,6 @@ void selectSortTest(void)
 }
 
 
-
-
-
-
 int main()
 {
 	selectSortTest();
