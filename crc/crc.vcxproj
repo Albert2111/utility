@@ -18,18 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sort\sort.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="sort\sort.c" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{4BB2F8AF-6818-41A7-927A-72CF32137B23}</ProjectGuid>
-    <RootNamespace>utility</RootNamespace>
+    <ProjectGuid>{C4479C68-08A1-4FD9-A075-FD77E4C7EB7C}</ProjectGuid>
+    <RootNamespace>crc</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>sort</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,6 +122,12 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="crc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="crc.c" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

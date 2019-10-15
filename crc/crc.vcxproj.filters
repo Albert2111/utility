@@ -15,12 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sort\sort.h">
+    <ClInclude Include="crc.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sort\sort.c">
+    <ClCompile Include="crc.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
