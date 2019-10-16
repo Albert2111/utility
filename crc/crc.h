@@ -10,3 +10,4 @@ unsigned short CRC16_IBM(unsigned char* puchMsg, unsigned int usDataLen);
 unsigned short CRC16_MAXIM(unsigned char* puchMsg, unsigned int usDataLen);
 unsigned short CRC16_USB(unsigned char* puchMsg, unsigned int usDataLen);
 
+void crcTest(void);

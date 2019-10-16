@@ -3,6 +3,7 @@
 
 int main()
 {
+	crcTest();
 	return 0;
 }
 
@@ -274,4 +275,18 @@ unsigned short CRC16_USB(unsigned char* puchMsg, unsigned int usDataLen)
 	}
 	InvertUint16(&wCRCin, &wCRCin);
 	return (wCRCin ^ 0xFFFF);
+}
+
+void crcTest(void)
+{
+	unsigned char data[] = { 0xAA, 0x12, 0x56, 0x21, 0xFE };
+	printf_s("%x\n", CRC16_CCITT(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_CCITT_FALSE(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_XMODEM(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_X25(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_MODBUS(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_IBM(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_MAXIM(data, sizeof(data) / sizeof(unsigned char)));
+	printf_s("%x\n", CRC16_USB(data, sizeof(data) / sizeof(unsigned char)));
+
 }
