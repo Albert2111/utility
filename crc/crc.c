@@ -57,6 +57,11 @@ void InvertUint16(unsigned short* DesBuf, unsigned short* SrcBuf)
 	DesBuf[0] = temp;
 }
 
+unsigned char CRC4_ITU(unsigned char* puchMsg, unsigned int usDataLen)
+{
+
+}
+
 unsigned short CRC16_CCITT(unsigned char* puchMsg, unsigned int usDataLen)
 {
 	unsigned short wCRCin = 0x0000;
@@ -279,7 +284,8 @@ unsigned short CRC16_USB(unsigned char* puchMsg, unsigned int usDataLen)
 
 void crcTest(void)
 {
-	unsigned char data[] = { 0xAA, 0x12, 0x56, 0x21, 0xFE };
+	unsigned char data[] = { 0xAA, 0x12, 0x56, 0x21, 0xFF };
+	printf_s("%x\n", CRC4_ITU(data, sizeof(data) / sizeof(unsigned char)));
 	printf_s("%x\n", CRC16_CCITT(data, sizeof(data) / sizeof(unsigned char)));
 	printf_s("%x\n", CRC16_CCITT_FALSE(data, sizeof(data) / sizeof(unsigned char)));
 	printf_s("%x\n", CRC16_XMODEM(data, sizeof(data) / sizeof(unsigned char)));

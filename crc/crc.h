@@ -1,6 +1,9 @@
 #pragma once
 void InvertUint8(unsigned char* DesBuf, unsigned char* SrcBuf);
 void InvertUint16(unsigned short* DesBuf, unsigned short* SrcBuf);
+
+unsigned char CRC4_ITU(unsigned char* puchMsg, unsigned int usDataLen);
+
 unsigned short CRC16_CCITT(unsigned char* puchMsg, unsigned int usDataLen);
 unsigned short CRC16_CCITT_FALSE(unsigned char* puchMsg, unsigned int usDataLen);
 unsigned short CRC16_XMODEM(unsigned char* puchMsg, unsigned int usDataLen);
